@@ -1627,13 +1627,17 @@ em {
 .contact-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--space-xl);
     max-width: 500px;
+    text-align: center;
 }
 
 .contact-item {
     display: flex;
-    gap: var(--space-lg);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
 }
 
 .contact-icon {
@@ -1647,6 +1651,10 @@ em {
     color: var(--primary);
     font-size: 1.25rem;
     flex-shrink: 0;
+}
+
+.contact-details {
+    text-align: center;
 }
 
 .contact-details h4 {
@@ -1666,6 +1674,10 @@ em {
     color: var(--primary);
 }
 
+.contact-social {
+    text-align: center;
+}
+
 .contact-social h4 {
     font-size: 1rem;
     margin-bottom: var(--space-md);
@@ -1675,6 +1687,7 @@ em {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: var(--space-md);
 }
 
