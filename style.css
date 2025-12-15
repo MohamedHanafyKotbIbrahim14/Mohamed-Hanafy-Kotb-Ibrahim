@@ -1335,6 +1335,45 @@ em {
     gap: var(--space-xs);
 }
 
+.course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary);
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.course-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.course-name a {
+    color: var(--primary-dark);
+    transition: color var(--transition-fast);
+}
+
+.course-name a:hover {
+    color: var(--accent);
+}
+
+.institution-name a {
+    color: var(--primary);
+    transition: color var(--transition-fast);
+}
+
+.institution-name a:hover {
+    color: var(--accent);
+}
+
 .teaching-stats {
     display: flex;
     justify-content: center;
