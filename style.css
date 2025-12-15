@@ -1357,6 +1357,13 @@ em {
     border-color: var(--primary);
 }
 
+.course-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
 .course-name a {
     color: var(--primary-dark);
     transition: color var(--transition-fast);
@@ -1613,15 +1620,15 @@ em {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--space-3xl);
+    display: flex;
+    justify-content: center;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: var(--space-xl);
+    max-width: 500px;
 }
 
 .contact-item {
