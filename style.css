@@ -760,6 +760,261 @@ em {
 }
 
 /* ============================================
+   Education Section - Timeline
+   ============================================ */
+.education {
+    background: var(--white);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: var(--space-xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent), var(--primary));
+    border-radius: var(--radius-full);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: var(--space-2xl);
+    padding-left: var(--space-xl);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: calc(-1 * var(--space-xl) - 8px);
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: var(--white);
+    border: 3px solid var(--accent);
+    border-radius: var(--radius-full);
+    z-index: 1;
+}
+
+.timeline-item:first-child .timeline-marker {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.2);
+}
+
+.timeline-content {
+    background: var(--off-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary);
+    transition: all var(--transition-base);
+}
+
+.timeline-content:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.timeline-date {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.date-range {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.date-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.date-badge.current {
+    background: rgba(52, 168, 83, 0.1);
+    color: var(--success);
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.timeline-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-dark);
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-body);
+}
+
+.timeline-institution,
+.timeline-location {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: var(--space-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.timeline-institution i,
+.timeline-location i {
+    color: var(--primary);
+    width: 16px;
+}
+
+.timeline-description {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    margin-top: var(--space-md);
+    margin-bottom: 0;
+}
+
+.timeline-achievement {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: linear-gradient(135deg, rgba(201, 162, 39, 0.1), rgba(201, 162, 39, 0.05));
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent-dark);
+}
+
+.timeline-achievement i {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: var(--space-lg);
+    }
+    
+    .timeline-item {
+        padding-left: var(--space-lg);
+    }
+    
+    .timeline-marker {
+        left: calc(-1 * var(--space-lg) - 8px);
+    }
+}
+
+/* ============================================
+   Honours & Awards Section
+   ============================================ */
+.awards {
+    background: var(--off-white);
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.award-card {
+    display: flex;
+    gap: var(--space-lg);
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    border-bottom: 3px solid transparent;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-bottom-color: var(--accent);
+}
+
+.award-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    border-radius: var(--radius-md);
+    color: var(--white);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.award-content {
+    flex: 1;
+}
+
+.award-year {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: var(--space-xs);
+}
+
+.award-title {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.award-institution {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: var(--space-sm);
+}
+
+.award-description {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .award-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .award-icon {
+        margin: 0 auto;
+    }
+}
+
+/* ============================================
    Research Section
    ============================================ */
 .research {
@@ -999,11 +1254,36 @@ em {
     background: var(--white);
 }
 
+.teaching-institution {
+    margin-bottom: var(--space-3xl);
+}
+
+.teaching-institution:last-of-type {
+    margin-bottom: var(--space-2xl);
+}
+
+.institution-name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--gray-200);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.institution-name i {
+    color: var(--accent);
+}
+
 .teaching-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-xl);
 }
 
 .teaching-card {
