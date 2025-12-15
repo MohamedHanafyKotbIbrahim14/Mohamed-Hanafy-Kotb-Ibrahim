@@ -1410,6 +1410,114 @@ em {
 }
 
 /* ============================================
+   Conferences Section
+   ============================================ */
+.conferences {
+    background: var(--off-white);
+}
+
+.conferences-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.conference-card {
+    display: flex;
+    gap: var(--space-lg);
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    border-left: 4px solid var(--primary);
+}
+
+.conference-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.conference-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: var(--radius-md);
+    color: var(--white);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.conference-content {
+    flex: 1;
+}
+
+.conference-year {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: var(--space-xs);
+}
+
+.conference-title {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.conference-venue {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: var(--space-md);
+}
+
+.conference-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.conference-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary);
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.conference-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .conferences-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .conference-card {
+        flex-direction: column;
+    }
+    
+    .conference-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ============================================
    Skills Section
    ============================================ */
 .skills {
