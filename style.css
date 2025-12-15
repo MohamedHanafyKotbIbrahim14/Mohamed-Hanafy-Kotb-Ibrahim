@@ -134,7 +134,11 @@ em {
 
 /* Section */
 .section {
-    padding: var(--space-4xl) 0;
+    padding: var(--space-3xl) 0;
+}
+
+.section.about {
+    padding-top: var(--space-xl);
 }
 
 .section-header {
@@ -388,11 +392,12 @@ em {
    Hero Section
    ============================================ */
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: var(--space-2xl);
     overflow: hidden;
 }
 
@@ -565,11 +570,7 @@ em {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: var(--space-xl);
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
+    display: none;
 }
 
 .scroll-arrow {
