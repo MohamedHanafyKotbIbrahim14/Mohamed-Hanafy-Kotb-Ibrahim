@@ -1272,6 +1272,7 @@ em {
     border-bottom: 2px solid var(--gray-200);
     font-family: var(--font-body);
     font-weight: 600;
+    word-spacing: -0.05em;
 }
 
 .institution-name i {
@@ -1285,6 +1286,7 @@ em {
 
 .institution-name span {
     color: var(--primary);
+    margin-left: -0.2em;
 }
 
 .teaching-responsibilities {
@@ -1296,10 +1298,10 @@ em {
 }
 
 .teaching-responsibilities p {
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
     color: var(--primary-dark);
-    line-height: 1.5;
+    line-height: 1.4;
     margin: 0;
     font-family: var(--font-heading);
 }
