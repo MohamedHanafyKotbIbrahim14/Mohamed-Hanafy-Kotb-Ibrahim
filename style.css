@@ -1281,6 +1281,8 @@ em {
 
 .institution-name a {
     color: var(--primary);
+    margin-right: 0;
+    padding-right: 0;
 }
 
 .teaching-responsibilities {
