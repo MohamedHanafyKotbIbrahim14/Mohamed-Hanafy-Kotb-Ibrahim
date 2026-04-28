@@ -1265,9 +1265,6 @@ em {
 }
 
 .institution-name {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
     font-size: 1.25rem;
     color: var(--primary);
     margin-bottom: var(--space-xl);
@@ -1279,6 +1276,37 @@ em {
 
 .institution-name i {
     color: var(--accent);
+    margin-right: var(--space-sm);
+}
+
+.institution-name a {
+    color: var(--primary);
+}
+
+.institution-name span {
+    color: var(--primary);
+}
+
+.teaching-responsibilities {
+    background: var(--off-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+    border-left: 4px solid var(--accent);
+}
+
+.teaching-responsibilities p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.5;
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+.teaching-responsibilities strong {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .teaching-grid {
