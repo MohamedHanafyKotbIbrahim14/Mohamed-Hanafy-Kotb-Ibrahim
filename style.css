@@ -2009,3 +2009,129 @@ em {
         font-size: 12pt;
     }
 }
+/* ===== VISITING PROGRAM SECTION ===== */
+/* Add this CSS to your style.css file */
+
+.visiting-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.visiting-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.visiting-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.visiting-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.visiting-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.visiting-details {
+    flex: 1;
+}
+
+.visiting-year {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-institution {
+    font-size: 1.1rem;
+    color: var(--gray-700);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-duration,
+.visiting-host {
+    color: var(--gray-600);
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-duration i,
+.visiting-host i {
+    color: var(--accent);
+    margin-right: var(--space-xs);
+}
+
+.visiting-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.visiting-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--gray-100);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.visiting-link:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.visiting-link i {
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .visiting-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .visiting-icon {
+        margin: 0 auto;
+    }
+    
+    .visiting-links {
+        justify-content: center;
+    }
+}
