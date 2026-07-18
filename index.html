@@ -1,911 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mohamed Hanafy Kotb Ibrahim - PhD Candidate in Risk & Actuarial Studies at UNSW Business School. Specializing in telematics-based insurance pricing and machine learning.">
-    <meta name="keywords" content="Mohamed Hanafy, Actuarial Science, Machine Learning, UNSW, PhD, Insurance, Telematics">
-    <meta name="author" content="Mohamed Hanafy Kotb Ibrahim">
-    <meta name="google-site-verification" content="GuuunlIJny0-oyfxwDuxwrNVGzjmO-SbvwqesEWe0mU" />
+/* ===== VISITING PROGRAM SECTION ===== */
+/* Add this CSS to your style.css file */
+
+.visiting-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.visiting-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.visiting-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.visiting-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.visiting-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.visiting-details {
+    flex: 1;
+}
+
+.visiting-year {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-institution {
+    font-size: 1.1rem;
+    color: var(--gray-700);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-duration,
+.visiting-host {
+    color: var(--gray-600);
+    margin-bottom: var(--space-sm);
+}
+
+.visiting-duration i,
+.visiting-host i {
+    color: var(--accent);
+    margin-right: var(--space-xs);
+}
+
+.visiting-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.visiting-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--gray-100);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.visiting-link:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.visiting-link i {
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .visiting-card {
+        flex-direction: column;
+        text-align: center;
+    }
     
-    <title>Mohamed Hanafy Kotb Ibrahim | Actuarial Science & Machine Learning</title>
+    .visiting-icon {
+        margin: 0 auto;
+    }
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-text">MH</span>
-            </a>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
-                <li class="nav-item"><a href="#teaching" class="nav-link">Teaching</a></li>
-                <li class="nav-item"><a href="#conferences" class="nav-link">Conferences</a></li>
-                <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
-                <li class="nav-item"><a href="#awards" class="nav-link">Awards</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Mohamed Hanafy Kotb Ibrahim (Mohamed)</h1>
-                <div class="hero-title-wrapper">
-                    <h2 class="hero-title">PhD Candidate in Risk & Actuarial Studies</h2>
-                    <p class="hero-institution">UNSW Business School, Sydney</p>
-                </div>
-                <p class="hero-tagline">Bridging traditional actuarial science with artificial intelligence</p>
-                <div class="hero-cta">
-                    <a href="#research" class="btn btn-primary">View My Research</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-                <div class="hero-social">
-                    <a href="https://www.linkedin.com/in/mohamed-hanafy-kotb-ibrahim-9ba128224/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=8DRa0RUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-frame">
-                    <div class="image-placeholder">
-                        <!-- Replace with your photo -->
-                        <img src="assets/images/profile.jpg" alt="Mohamed Hanafy Kotb Ibrahim" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="placeholder-icon">
-                            <i class="fas fa-user"></i>
-                            <span>Your Photo Here</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="image-decoration"></div>
-            </div>
-        </div>
-        <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
-            <span class="scroll-arrow"></span>
-        </a>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                        I am a PhD candidate at <strong>UNSW Business School</strong>, working under the supervision of 
-                        <a href="https://www.unsw.edu.au/staff/eric-c-k--cheung" target="_blank" rel="noopener"><strong>Associate Professor Eric C.K. Cheung</strong></a>, 
-                        <a href="https://www.unsw.edu.au/staff/andres-villegas-ramirez" target="_blank" rel="noopener"><strong>Associate Professor Andrés Villegas Ramirez</strong></a>, and 
-                        <a href="https://www.unsw.edu.au/staff/jae-kyung-woo" target="_blank" rel="noopener"><strong>Professor Jae Kyung Woo</strong></a>.
-                    </p>
-                    <p>
-                        My research focuses on the intersection of actuarial science and machine learning techniques. 
-                        My work combines actuarial and data-driven methods to support fair and accurate decision-making. 
-                        I have hands-on experience with Python and R, and I enjoy solving real-world problems using AI.
-                    </p>
-                    <p>
-                        Beyond research, I am passionate about teaching and have served as a Teaching Assistant for multiple 
-                        courses in actuarial data science, and AI applications in insurance.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <h3 class="card-title">Quick Facts</h3>
-                    <ul class="facts-list">
-                        <li>
-                            <i class="fas fa-university"></i>
-                            <span><strong>Institution:</strong> UNSW Sydney</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-book"></i>
-                            <span><strong>Program:</strong> PhD in Risk & Actuarial Studies</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span><strong>Location:</strong> Sydney, Australia</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span><strong>Email:</strong> mohamed_hanafy.ibrahim@student.unsw.edu.au</span>
-                        </li>
-                    </ul>
-                    <a href="CV.pdf" class="btn btn-outline" target="_blank">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section education" id="education">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="education-grid">
-                <div class="edu-card expandable" onclick="toggleExpand(this)">
-                    <div class="edu-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <div class="edu-card-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="edu-year">2024 – Present</div>
-                                <h3 class="edu-title">Doctor of Philosophy (PhD)</h3>
-                                <p class="edu-institution">UNSW Sydney</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="edu-field">Risk and Actuarial Studies</p>
-                            <p class="edu-location">
-                                <i class="fas fa-map-marker-alt"></i> Sydney, Australia
-                            </p>
-                            <div class="edu-links">
-                                <a href="https://www.unsw.edu.au/hdr/mohamed-hanafy-kotb-ibrahim" target="_blank" class="edu-link">
-                                    <i class="fas fa-user"></i> My Profile
-                                </a>
-                                <a href="https://www.unsw.edu.au/business" target="_blank" class="edu-link">
-                                    <i class="fas fa-building"></i> School Page
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edu-card expandable" onclick="toggleExpand(this)">
-                    <div class="edu-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="edu-card-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="edu-year">2023 – 2024</div>
-                                <h3 class="edu-title">Master of Pre-Doctoral Business Studies (MPDBS)</h3>
-                                <p class="edu-institution">UNSW Sydney</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="edu-field">Risk and Actuarial Studies</p>
-                            <p class="edu-location">
-                                <i class="fas fa-map-marker-alt"></i> Sydney, Australia
-                            </p>
-                            <div class="edu-links">
-                                <a href="https://www.unsw.edu.au/hdr/mohamed-hanafy-kotb-ibrahim" target="_blank" class="edu-link">
-                                    <i class="fas fa-user"></i> My Profile
-                                </a>
-                                <a href="https://www.unsw.edu.au/business" target="_blank" class="edu-link">
-                                    <i class="fas fa-building"></i> School Page
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edu-card expandable" onclick="toggleExpand(this)">
-                    <div class="edu-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="edu-card-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="edu-year">2019 – 2022</div>
-                                <h3 class="edu-title">Master's Degree</h3>
-                                <p class="edu-institution">Zhejiang Gongshang University</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="edu-field">Statistics and Mathematics</p>
-                            <p class="edu-location">
-                                <i class="fas fa-map-marker-alt"></i> Hangzhou, China
-                            </p>
-                            <div class="edu-achievement">
-                                <i class="fas fa-trophy"></i> First-class honours — Highest grades among all students
-                            </div>
-                            <div class="edu-links">
-                                <a href="https://www.zjgsu.edu.cn/" target="_blank" class="edu-link">
-                                    <i class="fas fa-external-link-alt"></i> University Website
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="edu-card expandable" onclick="toggleExpand(this)">
-                    <div class="edu-icon">
-                        <i class="fas fa-scroll"></i>
-                    </div>
-                    <div class="edu-card-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="edu-year">2013 – 2017</div>
-                                <h3 class="edu-title">Bachelor's Degree</h3>
-                                <p class="edu-institution">Assiut University</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="edu-field">Statistics, Mathematics, and Insurance</p>
-                            <p class="edu-location">
-                                <i class="fas fa-map-marker-alt"></i> Assiut, Egypt
-                            </p>
-                            <div class="edu-achievement">
-                                <i class="fas fa-trophy"></i> First-class honours — Highest grades among all students
-                            </div>
-                            <div class="edu-links">
-                                <a href="https://b.aun.edu.eg/commerce/mohamed-hanfi-kotb-ibrahim" target="_blank" class="edu-link">
-                                    <i class="fas fa-user"></i> Profile Page
-                                </a>
-                                <a href="https://www.aun.edu.eg/" target="_blank" class="edu-link">
-                                    <i class="fas fa-external-link-alt"></i> University Website
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section class="section research" id="research">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Research Interests</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Exploring the frontiers of actuarial science and machine learning</p>
-            </div>
-            
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h4>Insurance Pricing</h4>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h4>Machine Learning</h4>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h4>Reinforcement Learning</h4>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4>Optimization</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teaching Section -->
-    <section class="section teaching" id="teaching">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Teaching Experience</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Empowering the next generation of actuaries and data scientists</p>
-            </div>
-            
-            <div class="teaching-responsibilities">
-                <p><strong>Responsibilities:</strong> Prepare materials, teach tutorials, consultations, mark assignments, participate in marking final exams, and administrative tasks.</p>
-            </div>
-            
-            <!-- UNSW Teaching -->
-            <div class="teaching-institution">
-                <h3 class="institution-name"><i class="fas fa-university"></i><a href="https://www.unsw.edu.au/business" target="_blank" rel="noopener">UNSW Business School,</a> Sydney, Australia</h3>
-                
-                <div class="teaching-grid">
-                    <div class="teaching-card">
-                        <div class="course-code">COMM5601</div>
-                        <h4 class="course-name">Interdisciplinary Applications of Analytics Techniques</h4>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Term 1, 2026</span>
-                        </div>
-                        <div class="course-links">
-                            <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2026/comm5601?year=2026" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-book"></i> Course Page
-                            </a>
-                            <a href="https://timetable.unsw.edu.au/2026/COMM5601.html" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-clock"></i> Classes
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <div class="course-code">ACTL5305</div>
-                        <h4 class="course-name">Actuarial Data Science Applications</h4>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Term 3, 2025</span>
-                        </div>
-                        <div class="course-links">
-                            <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2025/actl5305?year=2025" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-book"></i> Course Page
-                            </a>
-                            <a href="https://timetable.unsw.edu.au/2025/ACTL5305.html" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-clock"></i> Classes
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <div class="course-code">ACTL5111</div>
-                        <h4 class="course-name">AI & Deep Learning Models for Risk and Insurance</h4>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Term 2, 2025</span>
-                        </div>
-                        <div class="course-links">
-                            <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2025/actl5111?year=2025" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-book"></i> Course Page
-                            </a>
-                            <a href="https://timetable.unsw.edu.au/2025/ACTL5111.html" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-clock"></i> Classes
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <div class="course-code">RISK5003</div>
-                        <h4 class="course-name">Risk Decision Analytics</h4>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Term 2, 2025</span>
-                        </div>
-                        <div class="course-links">
-                            <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2025/risk5003" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-book"></i> Course Page
-                            </a>
-                            <a href="https://timetable.unsw.edu.au/2025/RISK5003.html" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-clock"></i> Classes
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <div class="course-code">COMM5601</div>
-                        <h4 class="course-name">Interdisciplinary Applications of Analytics Techniques</h4>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Term 1, 2025</span>
-                        </div>
-                        <div class="course-links">
-                            <a href="https://www.handbook.unsw.edu.au/postgraduate/courses/2025/comm5601?year=2025" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-book"></i> Course Page
-                            </a>
-                            <a href="https://timetable.unsw.edu.au/2025/COMM5601.html" target="_blank" rel="noopener" class="course-link">
-                                <i class="fas fa-clock"></i> Classes
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assiut University Teaching -->
-            <div class="teaching-institution">
-                <h3 class="institution-name"><i class="fas fa-university"></i><a href="https://www.aun.edu.eg/" target="_blank" rel="noopener">Assiut University,</a> Assiut, Egypt</h3>
-                <div class="teaching-grid">
-                    <div class="teaching-card">
-                        <h4 class="course-name">Applied Statistics</h4>
-                        <p class="course-description">
-                            Statistical methods and their practical applications in real-world data analysis and inference.
-                        </p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Spring 2022</span>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <h4 class="course-name">Investment Mathematics</h4>
-                        <p class="course-description">
-                            Mathematical principles of investment analysis, portfolio theory, and financial calculations.
-                        </p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Spring 2022</span>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <h4 class="course-name">Operations Research</h4>
-                        <p class="course-description">
-                            Mathematical optimization methods, linear programming, and decision analysis for business applications.
-                        </p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Fall 2021/2022</span>
-                        </div>
-                    </div>
-
-                    <div class="teaching-card">
-                        <h4 class="course-name">Insurance & its Mathematics</h4>
-                        <p class="course-description">
-                            Fundamental concepts of insurance theory and mathematical foundations for insurance calculations.
-                        </p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-user-tie"></i> Teaching Assistant</span>
-                            <span><i class="fas fa-calendar"></i> Spring 2019</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="teaching-stats">
-                <div class="stat-item">
-                    <div class="stat-number">9+</div>
-                    <div class="stat-label">Courses</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Universities</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Countries</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Above Avg</div>
-                    <div class="stat-label">Student Feedback</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conferences Section -->
-    <section class="section conferences" id="conferences">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Conferences & Presentations</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="conferences-grid">
-                <div class="conference-card">
-                    <div class="conference-icon">
-                        <i class="fas fa-globe-asia"></i>
-                    </div>
-                    <div class="conference-content">
-                        <div class="conference-year">2026</div>
-                        <h3 class="conference-title">29th International Congress on Insurance: Mathematics and Economics (IME 2026)</h3>
-                        <p class="conference-venue">SKKU (Sungkyunkwan University), Seoul, Republic of Korea</p>
-                        <p class="conference-date"><i class="fas fa-calendar-alt"></i> June 30 – July 3, 2026</p>
-                        <div class="conference-links">
-                            <a href="https://ime2026.org/" target="_blank" class="conference-link">
-                                <i class="fas fa-external-link-alt"></i> Conference Page
-                            </a>
-                            <a href="https://ime2026.org/agenda/" target="_blank" class="conference-link">
-                                <i class="fas fa-list"></i> Agenda
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conference-card">
-                    <div class="conference-icon">
-                        <i class="fas fa-snowflake"></i>
-                    </div>
-                    <div class="conference-content">
-                        <div class="conference-year">2026</div>
-                        <h3 class="conference-title">Scandinavian Actuarial Conference (SAC 2026)</h3>
-                        <p class="conference-venue">Stockholm University, Stockholm, Sweden</p>
-                        <p class="conference-date"><i class="fas fa-calendar-alt"></i> June 15–16, 2026</p>
-                        <div class="conference-links">
-                            <a href="https://sites.google.com/view/sac2026" target="_blank" class="conference-link">
-                                <i class="fas fa-external-link-alt"></i> Conference Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conference-card">
-                    <div class="conference-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="conference-content">
-                        <div class="conference-year">2026</div>
-                        <h3 class="conference-title">Insurance Data Science Conference (IDSC 2026)</h3>
-                        <p class="conference-venue">Leibniz University Hannover, Hannover, Germany</p>
-                        <p class="conference-date"><i class="fas fa-calendar-alt"></i> June 9–10, 2026</p>
-                        <div class="conference-links">
-                            <a href="https://insurancedatascience.org/" target="_blank" class="conference-link">
-                                <i class="fas fa-external-link-alt"></i> Conference Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conference-card">
-                    <div class="conference-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <div class="conference-content">
-                        <div class="conference-year">2025</div>
-                        <h3 class="conference-title">Australasian Actuarial Education and Research Symposium (AAERS)</h3>
-                        <p class="conference-venue">UNSW Sydney, Australia</p>
-                        <div class="conference-links">
-                            <a href="https://conference.unsw.edu.au/en/2025-australasian-actuarial-education-and-research-symposium" target="_blank" class="conference-link">
-                                <i class="fas fa-external-link-alt"></i> Conference Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conference-card">
-                    <div class="conference-icon">
-                        <i class="fas fa-globe-africa"></i>
-                    </div>
-                    <div class="conference-content">
-                        <div class="conference-year">2025</div>
-                        <h3 class="conference-title">Actuarial, Finance, Risk and Insurance Congress 2 (AFRIC 2)</h3>
-                        <p class="conference-venue">Kenya</p>
-                        <div class="conference-links">
-                            <a href="https://www.unsw.edu.au/business/our-schools/risk-actuarial/news-events/actuarial-finance-risk-and-insurance-congress-2" target="_blank" class="conference-link">
-                                <i class="fas fa-external-link-alt"></i> Conference Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section class="section publications" id="publications">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Publications</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="publications-content">
-                <p class="publications-intro">View my complete list of publications and citations on Google Scholar.</p>
-                <a href="https://scholar.google.com/citations?user=8DRa0RUAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-primary">
-                    <i class="fas fa-graduation-cap"></i> View on Google Scholar
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Honours & Awards Section -->
-    <section class="section awards" id="awards">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Honours & Awards</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="awards-grid">
-                <div class="award-card expandable" onclick="toggleExpand(this)">
-                    <div class="award-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <div class="award-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="award-year">2025</div>
-                                <h3 class="award-title">3MT Prize Competition</h3>
-                                <p class="award-institution">UNSW Sydney (University Level)</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="award-description">
-                                Three Minute Thesis competition recognizing excellence in research communication at university level.
-                            </p>
-                            <div class="award-links">
-                                <a href="https://www.youtube.com/watch?v=_MAEmPQRMqo&list=PL50XnIfJxPDU3ERa6Wd92ZUv1mSKl5V4X&index=13" target="_blank" class="award-link">
-                                    <i class="fab fa-youtube"></i> Watch Video
-                                </a>
-                                <a href="https://www.unsw.edu.au/unsw-3-minute-thesis" target="_blank" class="award-link">
-                                    <i class="fas fa-trophy"></i> About the Prize
-                                </a>
-                                <a href="https://www.unsw.edu.au/news/2025/09/mohamed-2025-3mt-finals" target="_blank" class="award-link">
-                                    <i class="fas fa-newspaper"></i> News Article
-                                </a>
-                                <a href="https://www.linkedin.com/posts/unswbusiness_congratulations-to-mohamed-hanfy-kotb-ibrahim-activity-7373544311247810560-xWIi/" target="_blank" class="award-link">
-                                    <i class="fab fa-linkedin"></i> LinkedIn Post
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="award-card expandable" onclick="toggleExpand(this)">
-                    <div class="award-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <div class="award-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="award-year">2025</div>
-                                <h3 class="award-title">3MT Prize Competition</h3>
-                                <p class="award-institution">UNSW Business School</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="award-description">
-                                Three Minute Thesis competition recognizing excellence in research communication at Business School level.
-                            </p>
-                            <div class="award-links">
-                                <a href="https://www.unsw.edu.au/business/our-schools/risk-actuarial/news-events/showcasing-our-research" target="_blank" class="award-link">
-                                    <i class="fas fa-trophy"></i> About the Prize
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="award-card expandable" onclick="toggleExpand(this)">
-                    <div class="award-icon">
-                        <i class="fas fa-scroll"></i>
-                    </div>
-                    <div class="award-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="award-year">2024</div>
-                                <h3 class="award-title">Dean's List</h3>
-                                <p class="award-institution">UNSW Business School</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="award-description">
-                                Included on the UNSW Business School Dean's List in recognition of outstanding academic achievements in 2023.
-                            </p>
-                            <div class="award-links">
-                                <a href="https://www.unsw.edu.au/business/student-life/student-recognition/dean-list-for-academic-excellence" target="_blank" class="award-link">
-                                    <i class="fas fa-scroll"></i> Dean's List Info
-                                </a>
-                                <a href="https://www.student.unsw.edu.au/prizes/2023" target="_blank" class="award-link">
-                                    <i class="fas fa-trophy"></i> 2023 Prizes
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="award-card expandable" onclick="toggleExpand(this)">
-                    <div class="award-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <div class="award-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="award-year">2022</div>
-                                <h3 class="award-title">First-Class Honours</h3>
-                                <p class="award-institution">Zhejiang Gongshang University</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="award-description">
-                                Achieved the highest grades among all students in the Master's program at the School of Statistics and Mathematics.
-                            </p>
-                            <div class="award-links">
-                                <a href="https://www.zjgsu.edu.cn/" target="_blank" class="award-link">
-                                    <i class="fas fa-external-link-alt"></i> University Website
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="award-card expandable" onclick="toggleExpand(this)">
-                    <div class="award-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="award-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="award-year">2017</div>
-                                <h3 class="award-title">First-Class Honours</h3>
-                                <p class="award-institution">Assiut University</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="award-description">
-                                Achieved the highest grades among all students in the Bachelor's program at the Department of Statistics, Mathematics, and Insurance.
-                            </p>
-                            <div class="award-links">
-                                <a href="https://b.aun.edu.eg/commerce/mohamed-hanfi-kotb-ibrahim" target="_blank" class="award-link">
-                                    <i class="fas fa-user"></i> Profile Page
-                                </a>
-                                <a href="https://www.aun.edu.eg/" target="_blank" class="award-link">
-                                    <i class="fas fa-external-link-alt"></i> University Website
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="award-card expandable" onclick="toggleExpand(this)">
-                    <div class="award-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="award-content">
-                        <div class="expand-header">
-                            <div>
-                                <div class="award-year">2026</div>
-                                <h3 class="award-title">Higher Degree Research Student Representative</h3>
-                                <p class="award-institution">UNSW Business School Research Committee</p>
-                            </div>
-                            <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
-                        </div>
-                        <div class="expand-content">
-                            <p class="award-description">
-                                Representing HDR students from UNSW Business School to the Faculty Research Committee for Academic Year 2026.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="skill-title">Actuarial Science</h3>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="skill-title">Data Analysis & Statistics</h3>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="skill-title">Machine Learning</h3>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-r-project"></i>
-                    </div>
-                    <h3 class="skill-title">R Programming</h3>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <h3 class="skill-title">Python</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">I'm always open to discussing research collaborations, opportunities, or just having a chat about actuarial science and machine learning.</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <a href="mailto:mohamed_hanafy.ibrahim@student.unsw.edu.au">mohamed_hanafy.ibrahim@student.unsw.edu.au</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Office</h4>
-                            <p>School of Risk and Actuarial Studies<br>
-                            UNSW Business School<br>
-                            Sydney, NSW 2052, Australia</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-social">
-                        <h4>Connect with Me</h4>
-                        <div class="social-links-named">
-                            <a href="https://www.linkedin.com/in/mohamed-hanafy-kotb-ibrahim-9ba128224/" target="_blank" rel="noopener" class="social-link-named">
-                                <i class="fab fa-linkedin-in"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://scholar.google.com/citations?user=8DRa0RUAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link-named">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Google Scholar</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    &copy; <span id="year"></span> Mohamed Hanafy Kotb Ibrahim. All rights reserved.
-                </p>
-                <p class="footer-credits">
-                    Built with <i class="fas fa-heart"></i> and hosted on GitHub Pages
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-</body>
-</html>
+    .visiting-links {
+        justify-content: center;
+    }
+}
